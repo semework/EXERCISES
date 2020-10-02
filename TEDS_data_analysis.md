@@ -1,5 +1,5 @@
 # EXERCISES
-EXERCISES
+EXERCISES - proposed project
 Project proposed to deeply investigate The Treatment Episode Data Set (TEDS), to understand how demographic
 and other factors influence drug/alcohol use and affect user's lives. I would like to see interactions, such 
 how variable importance and facor interaction changes with variables such as age, education, etc.
