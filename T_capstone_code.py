@@ -25,9 +25,15 @@ import networkx as nx
 import plotly.express as px
 #%% data path
 
+<<<<<<< HEAD
 work_path = "/Users/mulugetasemework/Dropbox/Excercises"
 =======
 
+#%% data path
+
+work_path = "/Volumes/MuluData/TDI/"
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
+=======
 #%% data path
 
 work_path = "/Volumes/MuluData/TDI/"
@@ -73,6 +79,9 @@ state_codes = pd.read_csv(os.path.join(results_path,'state_codes.csv'))
 =======
 if not os.path.exists(models_path):
     os.makedirs(models_path)
+<<<<<<< HEAD
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
+=======
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
 # %% plots house keeping
 
@@ -167,9 +176,12 @@ def clean_up_data(All_data, sparsity_thresh, NaN_thresh, corr_thresh, bad_value)
     All_data = All_data.reset_index(drop=True)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     All_data =  All_data[( All_data != bad_value).all(1)]
 
+=======
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
 =======
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
     # first  clean up data with sparsity analysis
@@ -184,6 +196,9 @@ def clean_up_data(All_data, sparsity_thresh, NaN_thresh, corr_thresh, bad_value)
     All_data = All_data.iloc[:, sparse_cols]
 =======
     All_data = All_data.iloc[:,sparse_cols]
+<<<<<<< HEAD
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
+=======
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
 
     #remove too-many NaN columns
@@ -209,6 +224,9 @@ def clean_up_data(All_data, sparsity_thresh, NaN_thresh, corr_thresh, bad_value)
 
     # drop highly correlated columns
 
+<<<<<<< HEAD
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
+=======
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
         # to dot that, first Create correlation matrix
     corr_matrix = All_data.reindex(columns=cols).corr().abs()
@@ -219,6 +237,10 @@ def clean_up_data(All_data, sparsity_thresh, NaN_thresh, corr_thresh, bad_value)
     # Find index of feature columns with correlation greater than 0.95
     to_drop = [column  for column in upper.columns if any(upper[column] > corr_thresh)]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
 =======
 
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
@@ -800,4 +822,7 @@ plt.xticks(fontsize=8)
 plt.yticks(fontsize=8)
 plt.savefig(os.path.join(results_path, str('Correlogram_' + ylabel_text + '.pdf')), bbox_inches = "tight")
 plt.show()
+<<<<<<< HEAD
+>>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
+=======
 >>>>>>> 386cd895fce9d8497f4835fccdf8c5aae3b1eee5
